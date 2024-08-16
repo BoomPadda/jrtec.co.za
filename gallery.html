@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J & R Tec Vehicle Mechanic Workshop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body style="background-color: #FDF5E6;">
+
+    <!-- Header Section -->
+
+    <header class="bg-primary text-white text-center py-5">
+        <h1> J&R Tec </h1>
+        <h5>From Breakdown to Fix: Onsite Repairs or Workshop Expertise - We Get You Back on the Road</h5>
+        <style>
+            /* this to test
+                * {
+                    border: 1px solid red;
+                }
+                */
+            header {
+                background: url('header-background.png') no-repeat center center;
+                background-size: cover;
+            }
+
+            body {
+                background-color: #FDF5E6;
+                padding-bottom: 40px;
+                /* Adjust based on the height of your footer */
+            }
+
+
+            .footer-item .icon {
+                color: #808080 !important;
+                /* Grey color */
+            }
+
+
+
+            .custom-image {
+                border-radius: 15px;
+                /* width: 600px; */
+                height: auto;
+                justify-content: center;
+                align-items: center;
+                height: 55vh;
+            }
+
+            .sticky-footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                /* Added for full-width */
+                width: 100%;
+                background-color: #FFFFFF;
+                color: black;
+                text-align: center;
+                display: flex;
+                justify-content: space-around;
+                padding: 5px;
+                z-index: 9999;
+            }
+
+
+            .footer-item {
+                flex-grow: 1;
+                text-align: center;
+                text-decoration: none;
+                /* Removes underline */
+                color: black;
+                /* Dark text */
+            }
+
+
+            .footer-item {
+                flex: 1;
+                /* ...your existing CSS... */
+                white-space: nowrap;
+                /* Prevents the text from breaking into the next line */
+                overflow: hidden;
+                /* Hide the overflow content */
+                text-overflow: ellipsis;
+                /* Add ellipsis when the text overflows */
+            }
+
+            h5 {
+                color: #ead7b4;
+            }
+
+            .footer-item i {
+                color: #b08638;
+                /* Or any color you like, can also be hex, rgba, etc */
+            }
+
+            .btn {
+                background-color: #b38f6b;
+            }
+
+            .custom-image {
+                border-radius: 20px;
+                width: 100%;
+                /* height: auto; */
+                /* justify-content: center; */
+                /* align-items: center; */
+                height: 35vh;
+                object-fit: cover;
+            }
+        </style>
+        <p id="status"></p>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="container my-5">
+        <a href="index.html" class="btn btn-secondary"></i> Back</i></a>
+
+        <div class="row">
+            <!-- Loop through 12 images -->
+            <div class="mt-4">
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/recovery3.jpeg" class="img-fluid custom-image" alt="Vehicle recovery"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/jacky.jpeg" class="img-fluid custom-image" alt="Picture of a dog"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/truck-mercedes.jpeg" class="img-fluid custom-image"
+                        alt="Picture of repair onsite Mercedes truck" onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/red-car.jpeg" class="img-fluid custom-image" alt="Picture of a red sport car"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/red-car2.jpeg" class="img-fluid custom-image"
+                        alt="Picture of a red sport car ready for repair" onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/old-truck.jpeg" class="img-fluid custom-image" alt="Picture of old truck"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/max.jpeg" class="img-fluid custom-image" alt="Picture of a boy changing tire"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/huge-truck.jpeg" class="img-fluid custom-image" alt="Picture of a huge yellow truck"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/engine2.jpeg" class="img-fluid custom-image" alt="Picture of engine 1"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/bobcat.jpeg" class="img-fluid custom-image" alt="Picture of engine 1"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/bobcat2.jpeg" class="img-fluid custom-image" alt="Picture of engine 1"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/riaan.jpeg" class="img-fluid custom-image" alt="Picture of engine 1"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/hydraulic1.jpeg" class="img-fluid custom-image" alt="Picture of engine 1"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/hydraulic2.jpeg" class="img-fluid custom-image" alt="Picture of engine 1"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/hydraulic3.jpeg" class="img-fluid custom-image" alt="Picture of engine 1"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/waste-removal.jpeg" class="img-fluid custom-image" alt="Picture of engine 1"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/gas-tank.jpeg" class="img-fluid custom-image" alt="Picture of gas tank"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/double-truck.jpeg" class="img-fluid custom-image" alt="Picture of a double truck"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/engine1.jpeg" class="img-fluid custom-image" alt="Picture of engine 2"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/detail1.jpeg" class="img-fluid custom-image" alt="Picture of car detail 1"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/dirt1.jpeg" class="img-fluid custom-image"
+                        alt="Picture of tractor going through dirt" onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/detail2.jpeg" class="img-fluid custom-image" alt="Picture of car detail 2"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/dirt2.jpeg" class="img-fluid custom-image"
+                        alt="Picture of a tractor going through dirt 2" onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/detail3.jpeg" class="img-fluid custom-image" alt="Picture of a car detail 3"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/dirt3.jpeg" class="img-fluid custom-image"
+                        alt="Picture of a car going through dirt 3" onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/car2.jpeg" class="img-fluid custom-image" alt="Picture of a car 2"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/dashboard.jpeg" class="img-fluid custom-image" alt="Picture of a car dashboard"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/car1.jpeg" class="img-fluid custom-image" alt="Picture of a car 1"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/car3.jpeg" class="img-fluid custom-image" alt="Picture of a car 3"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="gallery">
+                <div class="img-fluid">
+                    <img src="pics/car4.jpeg" class="img-fluid custom-image" alt="Picture of a car 4"
+                        onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <!-- Add more columns with images here -->
+        </div>
+
+        <!-- Back Button -->
+        <div class="mt-4">
+            <a href="index.html" class="btn btn-secondary"></i> Back</i></a>
+        </div>
+    </section>
+    <section></section>
+    <!-- Footer Section -->
+    <footer class="d-block d-md-none">
+        <!-- Your Footer Content for Mobile Here -->
+        <div class="sticky-footer">
+            <a href="tel:0726043993" class="footer-item" id="call-item">
+                <i class="fa-solid fa-phone-flip"></i><br>
+                Call
+            </a>
+            <a href="https://goo.gl/maps/dqExpF2Gq97oVszv7" target="_blank" class="footer-item">
+                <i class="fa-solid fa-diamond-turn-right"></i><br>
+                Directions
+            </a>
+            <a href="index.html" class="footer-item">
+                <i class="fa-solid fa-house"></i><br>
+                Home
+            </a>
+        </div>
+    </footer>
+
+    <footer class="bg-dark text-white text-center py-3 d-none d-md-block">
+        <!-- Your Footer Content for Desktop Here -->
+        <p>&copy; 2023 J & R Tec Vehicle Mechanic Workshop</p>
+    </footer>
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Enlarged image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="janweb3.js"></script>
+
+</body>
+
+</html>
